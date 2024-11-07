@@ -1,0 +1,797 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-decoration: none;
+}
+.site-wrapper {
+    width: 100%; /* Ensure the wrapper takes full width */
+    /* max-width: 1200px;  */
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+html{
+    scroll-behavior: smooth;
+}
+#home,#about,#skills,#projects,#contact{
+    height: auto;
+}
+.hero-section h1, .hero-section p {
+    position: relative;
+    z-index: 2;
+}
+#projects{
+    /* background-color: #7689D8; */
+    text-align: center;
+}
+.github-stats {
+    width: 400px; 
+    height: auto; 
+}
+#calend{
+    padding: 50px;
+}
+#calend{
+    padding: 20px;
+}
+#stats{
+    text-align: center;
+}
+.cover-screen {
+    width: 100%;
+    min-height: 100vh;
+}
+#learn{
+    background: transparent;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: nonefigi9;
+}
+#projects h1{
+    font-size: 38px;
+    color: #1C2273;
+}
+#projects p{
+    font-size: 22px;
+    color: #252525;
+}
+#projects a{
+    font-size: 22px;
+    background-color: #A1EACD;
+    color: #252525;
+    padding: 15px;
+    text-decoration: none;
+}
+#projects h4{
+    font-size: 30px;
+    color: #3B82F6;
+}
+#projects{
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+    /* background-color: yellowgreen; */
+}
+.home-icons{
+    margin-top: 60px;
+    font-size: 40px;
+    
+}
+.home-icons a{
+color: #000;
+padding: 20px;
+    
+}
+/* projects styles */
+
+
+.block{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content:space-evenly;
+    padding: 30px;
+}
+.block div {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.block div:nth-child(2) {
+    transform: translateX(50px);
+}
+
+.block.visible div {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#projects img{
+    width: 80%;
+}
+#projectdiv i{
+    font-size: 38px;
+    padding: 20px;
+}
+@keyframes appear {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+
+/* skills page styles */
+
+
+#skills{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /* background-color: red; */
+}
+  #skillsgrid>div div{
+    display: grid; 
+    gap: 0px;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #skillsgrid img {
+    /* margin-left: 40px; */
+    margin: 10px 30px;
+    width: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    transform: translateX(-50px); 
+    transition: all 0.5s ease;
+}
+#skills{
+    text-align: center;
+}
+#skillsgrid {
+    display: grid;
+    margin-bottom: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+#skillsgrid.animate img {
+    opacity: 1;
+    transform: translateX(0); 
+    transition: all 0.5s ease;
+}
+.github{
+    display: flex;
+    gap: 20px;
+}
+/* Laptop View */
+@media (max-width: 1300px) {
+    #skillsgrid {
+        /* margin: auto; */
+      /* width: 80%;   */
+      grid-template-columns: repeat(3, 1fr);  
+    }
+  
+    #skillsgrid img {
+      margin: 10px 20px;  /* Adjust margins for tablet */
+      width: 45px;  /* Adjust image size for tablet */
+    }
+
+    #heading{
+        font-size: 55px;
+        font-weight: 500;
+    }
+
+    /* #home .content {
+        font-size: 20px;
+    } */
+  }
+/* Tablet View */
+@media (max-width: 768px) {
+    #skillsgrid {
+      /* width: 80%;   */
+      grid-template-columns: repeat(2, 1fr);  
+    }
+  
+    #skillsgrid img {
+      margin: 10px 20px;  /* Adjust margins for tablet */
+      width: 45px;  /* Adjust image size for tablet */
+    }
+
+    #heading{
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+    #home .content {
+        font-size: 20px;
+    }
+  }
+  
+  /* Phone View */
+  @media (max-width: 480px) {
+    #skillsgrid {
+      /* width: 100%;  */
+      grid-template-columns: repeat(1, 1fr);  
+    }
+  
+    #skillsgrid img {
+      margin: 10px auto;  /* Center images on phone */
+      width: 40px;  /* Adjust image size for phone */
+    }
+
+    #heading{
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    #home .content {
+        font-size: 20px;
+    }
+  }
+  
+
+/* Tablet view */
+@media (max-width: 768px) {
+    #projects h1 {
+        font-size: 32px;
+    }
+
+    #projects p, #projects a {
+        font-size: 20px;
+    }
+
+    #projects h4 {
+        font-size: 26px;
+    }
+    #projects{
+        padding: 10px;
+    }
+    #projectdiv{
+        width: 100%;
+        /* flex-wrap: wrap; */
+    }
+    #projects a{
+        font-size: 17px;
+        padding: 10px;
+    }
+    .github{
+        flex-direction: column;
+        gap: 10px;
+        font-size: 10px;
+    }
+    .block {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;    /* Center align items */
+    }
+
+    .block img {
+        max-width: 80%; /* Set a specific width for the image */
+        width: auto;    /* Ensure the width is automatic */
+    }
+    .imgreverse {
+        flex-direction: column-reverse; 
+        text-align: center;
+    }
+    .imgnotreverse {
+        flex-direction: column; 
+        text-align: center;
+    }
+}
+.block img {
+    max-width: 100%;  /* Allows the image to scale down while maintaining aspect ratio */
+    height: auto;     /* Keeps the aspect ratio intact */
+    flex: 1;          /* Allows the image to grow in available space */
+}
+/* Mobile view */
+@media (max-width: 480px) {
+    #projects h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    #projects p, #projects a {
+        font-size: 18px;
+    }
+
+    #projects h4 {
+        font-size: 22px;
+    }
+
+    .block {
+        /* flex-direction: column; */
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+    .github{
+        flex-direction: column;
+        /* width: 40%; */
+        margin: auto;
+    }
+    #projects{
+        padding: 10px;
+    }
+    #projectdiv{
+        width: 100%;
+    }
+    .imgreverse {
+        flex-direction: column-reverse; 
+        text-align: center;
+    }
+    .imgnotreverse {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .block img {
+        /* max-width: 200px; */
+        width: 100%;
+    }
+}
+
+#theend{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Contact page styles */
+
+/* General Styles */
+#contact {
+    /* background-color: #f5f5f5; */
+    width: 100%;
+    margin: auto;
+}
+#footer{
+    margin: auto;
+    max-width: 1200px;
+    padding: 30px;
+}
+#contact h2 {
+    font-size: 56px;
+    /* color: #f5f5f5; */
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contactform {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left section with form */
+#contactform > div:first-child {
+    flex: 1;
+    /* background-color: red; */
+    text-align: start;
+}
+
+#contactform h4 {
+    font-size: 30px;
+    /* color: #333; */
+    color: #3B82F6;
+}
+
+#contactform p {
+    font-size: 20px;
+    color: #555;
+}
+
+form label {
+    font-size: 18px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"]{
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #374151;
+}
+form textarea {
+    width: 90%; 
+    height: 150px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #374151;
+    border-radius: 5px;
+    resize: vertical; 
+}
+form input[type="submit"] {
+    background-color: #6366F1;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5254c6;
+}
+
+/* Right section with contact info */
+#contactform > div:last-child {
+    flex: 1;
+    text-align: right;
+}
+
+#contactform h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#contactform i {
+    font-size: 24px;
+    color: #333;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#contactform i:hover {
+    color: #6366F1;
+}
+form input[type="submit"] {
+    text-align: end;
+}
+
+/* Tablet View */
+@media (max-width: 870px) {
+    #contactform {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #contact {
+        padding: 20px 0;
+    }
+    #contactform > div:first-child,
+    #contactform > div:last-child {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 28px;
+    }
+
+    #contactform h4 {
+        font-size: 20px;
+    }
+
+    #contactform p {
+        font-size: 16px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+    #contact {
+        padding: 0px;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    form input[type="submit"] {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    #contactform h3 {
+        font-size: 18px;
+    }
+    #contactform i {
+        font-size: 20px;
+        /* text-align: center; */
+    }
+
+}
+
+#stats img {
+    width: 100%; /* Full width for flexibility */
+    max-width: 400px; /* Limit max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) { /* Tablet view */
+    #stats img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile view */
+    #stats img {
+        max-width: 100%;
+    }
+}
+/* About section */
+
+#about {
+    width: 100%;
+    padding-top: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+#about h2{
+    font-size: 24px;
+}
+#about p{
+    font-size: 17px;
+}
+#aboutsection {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+  /* Full viewport background image */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('./a99e811c-eb55-4196-83f3-f4bd178bdcf6.jpg') no-repeat center center/cover;
+    text-align: center;
+    width: 100%; /* Ensure it takes the full width */
+    position: relative; /* Optional, for layering purposes */
+  }
+  
+  /* Content styling */
+  .content {
+    text-align: center;
+    width: 100%; /* Ensure the content fills the available width */
+  }
+  /* Example of your fade-in class */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #learn{
+    text-decoration: none;
+    background-color: #3B82F6;
+    padding: 20px 80px;
+  }
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .site-wrapper {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  }
+  
+  /* Example for controlling font sizes */
+  .fade-in.greeting { animation-delay: 0s; font-size: calc(1vw + 15px); }
+  .fade-in.name { animation-delay: 0.5s; font-size: calc(5vw + 50px); margin: 0;}
+  .fade-in.title { animation-delay: 1s; font-size: calc(2vw + 10px);}
+  .fade-in.description { animation-delay: 1.5s; font-size: calc(1.5vw + 10px); margin-bottom: 50px; }
+  .fade-in.resume-btn { animation-delay: 2s; }
+  .fade-in.home-icons{ animation-delay: 2s; }
+  /* Larger screens */
+@media (min-width: 1200px) {
+  .fade-in.greeting { font-size: 2rem; }
+  .fade-in.name { font-size: 6rem; }
+  .fade-in.title { font-size: 2.5rem; }
+  .fade-in.description { font-size: 1.8rem; }
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .fade-in.greeting { font-size: 1.5rem; }
+  .fade-in.name { font-size: 4rem; }
+  .fade-in.title { font-size: 1.8rem; }
+  .fade-in.description { font-size: 1.2rem; }
+}
+
+/* navbar */
+
+/* Navbar */
+#navbar {
+    position: sticky;
+    top: 0;
+    /* padding: 20px; */
+    z-index: 1000;
+    width: 100%;
+    
+    margin: auto;
+    /* background-color: #5254c6; */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+    /* background-color: #6366F1; */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+  }
+ 
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* Light/Dark Mode */
+  .dark-mode {
+    background-color: #333;
+  }
+  
+  .dark-mode #navbar {
+    background-color: #333;
+  }
+  
+  .dark-mode .site-wrapper {
+    background-color: white;
+  }
+  
+
+  @media (max-width: 768px) {
+    nav a {
+      display: none;
+    }
+    .burger-menu {
+      display: block;
+    }
+  }
+   
+  /* Expand burger menu on click */
+  nav.open a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+  }
+  
+
+  /* Light mode (default) styles */
+.site-wrapper {
+    background-color: white;
+    color: black;
+    /* Other styles as needed */
+}
+
+/* Dark mode styling */
+.site-wrapper.dark-theme {
+    background-color: #000;
+    color: white;
+}
+#contact.dark-theme {
+    background-color: #000;
+    color: white;
+}
+.site-wrapper.dark-theme #navbar,
+.site-wrapper.dark-theme #home,
+.site-wrapper.dark-theme #about,
+.site-wrapper.dark-theme #skills,
+.site-wrapper.dark-theme #projects,
+.site-wrapper.dark-theme #contact,
+.site-wrapper.dark-theme #theend {
+    /* Set background to black only if it was initially white */
+    background-color: #000;
+    color: white;
+}
+
+/* To ensure colors like blue remain the same */
+#home p, #about p, #skills p, #projects p, #contact p, #theend p {
+    /* Override specific text colors here, e.g. blue text for the title */
+    color: inherit; /* keeps non-black/white colors the same */
+}
+
+
+
+.about-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    padding: 0; /* Adjust if necessary */
+}
+
+.about-image img {
+    max-width: 300px; /* Set a max-width for desktop view */
+    width: 100%; /* Make the image responsive */
+    height: auto;
+}
+
+@media (max-width: 1024px) { /* Laptop */
+    #aboutsection {
+        flex-direction: row; /* Horizontal layout */
+    }
+    .about-image img {
+        max-width: 250px; /* Limit the image width */
+    }
+}
+
+@media (max-width: 768px) { /* Tablet */
+    #aboutsection {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center items */
+    }
+    .about-content {
+        text-align: center; /* Center text on smaller screens */
+    }
+    .about-image {
+        margin-top: 20px;
+    }
+    .about-image img {
+        max-width: 250px; /* Limit the image width for tablets */
+    }
+    #about p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+
+    .about-content {
+        padding: 10px;
+    }
+    .about-image img {
+        max-width: 200px; /* Limit the image width for mobile */
+    }
+    #about p {
+        font-size: 14px;
+    }
+}
